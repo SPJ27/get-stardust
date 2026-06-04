@@ -7,10 +7,10 @@ export async function POST({request}){
     const body = await request.json()
     try {
         console.log(body)
-    // const response = await web.chat.postMessage({
-    //   channel: 'C0B8K3MC9LG',
-    //   text: `<@${body.user_id}> has been banned permanently for trying to get free stardusts... be good kids ^^ (ofc as a joke)`,
-    // });
+    const response = await web.chat.postMessage({
+      channel: 'C0B8K3MC9LG',
+      text: `<@${body.user_id}> has been banned permanently for trying to get free stardusts... be good kids ^^ (ofc as a joke)`,
+    });
     console.log('Message sent: ', response.ts);
   } catch (error) {
     console.error('Error sending message:', error);
